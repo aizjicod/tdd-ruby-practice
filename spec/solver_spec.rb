@@ -76,7 +76,7 @@ describe Solver do
     end
 
     it 'check solver method factorial with negavite value (-5)' do
-      expect(@solver.factorial(-5)).to raise_error("a factorial can't be a negative number")
+      expect { @solver.factorial(-5) }.to raise_error(RuntimeError, "a factorial can't be a negative number")
     end
   end
 end
